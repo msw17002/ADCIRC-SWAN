@@ -199,7 +199,7 @@ make
 make install
 #===compile mpich for parallelization 
 echo "==============================================================================="
-echo "========================COMPILING NETCDF4-fortran=============================="
+echo "========================COMPILING MPICH=============================="
 echo "cd $HOME/apps/Downloads"
 echo "cd ${MPIC}/"
 echo "./configure --prefix=$DIR"
