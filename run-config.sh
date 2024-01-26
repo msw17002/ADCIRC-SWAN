@@ -37,7 +37,7 @@ export WORK=/home/data/ADCIRC/source-code/work
 echo "==============================================================================="
 echo "======================COMPILE MODELING SYSTEM=================================="
 echo 'git clone https://github.com/adcirc/adcirc.git'
-echo 'cd ./'
+echo 'cd ./adcirc'
 echo 'mkdir build'
 echo 'cd ./build'
 echo 'cmake .. -DBUILD_ADCIRC=ON \
