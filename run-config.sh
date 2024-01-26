@@ -56,7 +56,7 @@ echo 'cmake .. -DBUILD_ADCIRC=ON \
 git clone https://github.com/adcirc/adcirc.git
 
 #---navigate and create directory structure
-cd ./
+cd ./adcirc
 mkdir build 
 cd ./build 
 
