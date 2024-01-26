@@ -18,6 +18,7 @@ echo 'export WORK=/home/data/ADCIRC/source-code/work'
 echo "==============================================================================="
 sleep 5
 
+module purge
 export HOME=$(pwd)
 export DIR=${HOME}/apps/Library
 export CC=gcc
@@ -34,16 +35,40 @@ export FCFLAGS=-fallow-argument-mismatch
 export WORK=/home/data/ADCIRC/source-code/work
 
 echo "==============================================================================="
-echo "=========================COMPILING ADCIRC======================================"
-echo 'cd $WORK'
-echo 'make clobber'
-echo 'make adcirc aswip adcprep padcirc compiler=gfortran NETCDF=enable NETCDFHOME=$DIR NETCDF4=enable NETCDF4_COMPRESSION=enable'
-echo "==============================================================================="
-sleep 5
+echo "======================COMPILE MODELING SYSTEM=================================="
+echo 'git clone https://github.com/adcirc/adcirc.git'
+echo 'cd ./'
+echo 'mkdir build'
+echo 'cd ./build'
+echo 'cmake .. -DBUILD_ADCIRC=ON \
+         -DBUILD_PADCIRC=ON \
+         -DBUILD_ADCSWAN=ON \
+         -DBUILD_PADCSWAN=ON \
+         -DBUILD_ADCPREP=ON \
+         -DBUILD_UTILITIES=ON \
+         -DBUILD_ASWIP=ON \
+         -DBUILD_SWAN=ON \
+         -DBUILD_PUNSWAN=ON \
+         -DENABLE_OUTPUT_NETCDF=ON \
+         -DNETCDFHOME=${HOME}/apps/Library'
 
-#---go to the work directory
-cd $WORK
-#---clear working directory
-make clobber
-#---compile adcirc, aswip, adcprep, and parallel adcirc
-make adcirc aswip adcprep padcirc compiler=gfortran NETCDF=enable NETCDFHOME=$DIR NETCDF4=enable NETCDF4_COMPRESSION=enable
+#---clone the ADCIRC github repository
+git clone https://github.com/adcirc/adcirc.git
+
+#---navigate and create directory structure
+cd ./
+mkdir build 
+cd ./build 
+
+#---compile utilzing cmake
+cmake .. -DBUILD_ADCIRC=ON \
+         -DBUILD_PADCIRC=ON \
+         -DBUILD_ADCSWAN=ON \
+         -DBUILD_PADCSWAN=ON \
+         -DBUILD_ADCPREP=ON \
+         -DBUILD_UTILITIES=ON \
+         -DBUILD_ASWIP=ON \
+         -DBUILD_SWAN=ON \
+         -DBUILD_PUNSWAN=ON \
+         -DENABLE_OUTPUT_NETCDF=ON \
+         -DNETCDFHOME=${HOME}/apps/Library
