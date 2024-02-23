@@ -72,3 +72,4 @@ cmake .. -DBUILD_ADCIRC=ON \
          -DBUILD_PUNSWAN=ON \
          -DENABLE_OUTPUT_NETCDF=ON \
          -DNETCDFHOME=${HOME}/apps/Library
+make
