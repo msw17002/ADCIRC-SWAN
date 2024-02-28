@@ -1,4 +1,4 @@
-This script contains the following: 
+<b>This script contains the following:<b> 
 
 #===configuring of dependencies required to compile and run ADCRIC/SWAN
 1) comp-dependencies.sh  > compiles dependencies 
