@@ -1,6 +1,6 @@
 <b>This script contains the following:</b> 
 
-#===configuring of dependencies required to compile and run ADCRIC/SWAN
+<h1>Configuring & Compiling of Dependencies and ADCRIC/SWAN</h1>
 1) comp-dependencies.sh  > compiles dependencies 
 2) run-config.sh         > compiles ADCIRC+SWAN
 
