@@ -1,10 +1,11 @@
 <b>This script contains the following:</b> 
 
 <h1>Configuring & Compiling of Dependencies and ADCRIC/SWAN</h1>
-1) comp-dependencies.sh  > compiles dependencies <br>
-2) run-config.sh         > compiles ADCIRC+SWAN  <br>
-
-To run, 
+<p>1) comp-dependencies.sh  > compiles dependencies</p><br>
+<p>2) run-config.sh         > compiles ADCIRC+SWAN </p><br>
+<br>
+To run,
+<br>
 a) copy both shell-scripts.
 b) chmod +x file_name.sh
 c) ./comp-dependencies.sh
