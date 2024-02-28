@@ -1,4 +1,4 @@
-#!/home/msw17002/anaconda3/bin/python
+#!/path/to/bin/python
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -159,10 +159,10 @@ points = pd.DataFrame([])
 diags  = ["maxele.63.nc","maxwvel.63.nc","minpr.63.nc","swan_HS_max.63.nc"]
 #---main script
 for d in diags:
-    if os.path.exists(d):
-        logger.info("Generating: "+path+d.replace(".nc",".png"))
+    if os.path.exists(path+"/"+d):
+        logger.info("Generating: ./"+d.replace(".nc",".png"))
         #---read netcdf4 file 
-        nc = netCDF4.Dataset(d)
+        nc = netCDF4.Dataset(path+"/"+d)
         #---generate grid if it hasn't been created
         if points.shape==(0,0):
             logger.info("Building Mesh & Node Structure from: "+path+d+"!")
@@ -271,7 +271,7 @@ for d in diags:
             clev    = np.arange(0,44,1)
 
             #-also read max. flow direciton 
-            ncdir  = netCDF4.Dataset("swan_DIR_max.63.nc")
+            ncdir  = netCDF4.Dataset(path+"/"+"swan_DIR_max.63.nc")
             #-get field
             dirmax = np.asarray(ncdir['swan_DIR_max'][:])
             #-close file
