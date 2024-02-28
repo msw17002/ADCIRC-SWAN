@@ -6,20 +6,23 @@
     <li>run-config.sh         > compiles ADCIRC+SWAN </li>
 </ul>
 
-To run,
-<br>
-a) copy both shell-scripts.
-b) chmod +x file_name.sh
-c) ./comp-dependencies.sh
-d) ./run-config.sh
-
+<p>To run,</p>
+<ul>
+    <li>copy both shell-scripts.</li>
+    <li>chmod +x file_name.sh</li>
+    <li>./comp-dependencies.sh</li>
+    <li>./run-config.sh</li>
+</ul>
+    
 <h1>Generation of Images from Diagnostic Output from ADCIRC/SWAN</h1>
-~/Diagnostic-Images/gen-figs.py
-1) the following files are created from ADCIRC and or SWAN: maxele.63.nc, maxwvel.63.nc, minpr.63.nc, swan_HS_max.63.nc (must be accompanies by ).
-2) maxele.63.nc (field 'zeta_max') units are meters (converts to feet)
-3) maxwvel.63.nc (field 'wind_max') units are meters/second (convert to miles/hour)
-4) minpr.63.nc (field 'pressure_min') units are meters of head (convert to milibar) 
-5) swan_HS_max.63.nc (field 'swan_HS_max') units are meters (converts to feet)
+<p>~/Diagnostic-Images/gen-figs.py</p>
+<ul>
+    <li>the following files are created from ADCIRC and or SWAN: maxele.63.nc, maxwvel.63.nc, minpr.63.nc, swan_HS_max.63.nc (must be accompanies by swan_DIR_max.63.nc).</li>
+    <li>maxele.63.nc (field 'zeta_max') units are meters (converts to feet)</li>
+    <li>maxwvel.63.nc (field 'wind_max') units are meters/second (convert to miles/hour)</li>
+    <li>minpr.63.nc (field 'pressure_min') units are meters of head (convert to milibar)</li>
+    <li>swan_HS_max.63.nc (field 'swan_HS_max') units are meters (converts to feet)</li>
+</ul>
 
-To run,
-python gen-figs.py -path path_to_files
+<p>To run,</p>
+<p>python gen-figs.py -path path_to_files</p>
