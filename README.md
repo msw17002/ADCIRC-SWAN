@@ -1,8 +1,10 @@
 <b>This script contains the following:</b> 
 
 <h1>Configuring & Compiling of Dependencies and ADCRIC/SWAN</h1>
-<p>1) comp-dependencies.sh  > compiles dependencies</p>
-<p>2) run-config.sh         > compiles ADCIRC+SWAN </p>
+<ul>
+    <li>comp-dependencies.sh  > compiles dependencies</li>
+    <li>run-config.sh         > compiles ADCIRC+SWAN </li>
+</ul>
 
 To run,
 <br>
