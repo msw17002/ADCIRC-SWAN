@@ -10,7 +10,7 @@ b) chmod +x file_name.sh
 c) ./comp-dependencies.sh
 d) ./run-config.sh
 
-#===script to create figures from netcdf output from ADCIRC/SWAN assuming;
+<h1>Generation of Images from Diagnostic Output from ADCIRC/SWAN</h1>
 ~/Diagnostic-Images/gen-figs.py
 1) the following files are created from ADCIRC and or SWAN: maxele.63.nc, maxwvel.63.nc, minpr.63.nc, swan_HS_max.63.nc (must be accompanies by ).
 2) maxele.63.nc (field 'zeta_max') units are meters (converts to feet)
