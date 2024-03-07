@@ -1,0 +1,13 @@
+Example image generation using ADCIRC-SWAN on the HFOS mesh.
+
+For metric units:
+./gen-figs.py -path /shared/stormcenter/AirMG/running_simulations/MIKE/modeling-systems/simulations/Sandy-320/ -unit si
+OR
+python gen-figs.py -path /shared/stormcenter/AirMG/running_simulations/MIKE/modeling-systems/simulations/Sandy-320/ -unit imperial
+
+For English? units:
+./gen-figs.py -path /shared/stormcenter/AirMG/running_simulations/MIKE/modeling-systems/simulations/Sandy-320/ -unit si
+OR
+python gen-figs.py -path /shared/stormcenter/AirMG/running_simulations/MIKE/modeling-systems/simulations/Sandy-320/ -unit imperial
+
+To run as an exectuable, edit gen-figs.py from '#!/home/msw17002/anaconda3/bin/python' to; #!/path/to/python/executable
