@@ -1,0 +1,8 @@
+Example image generation using ADCIRC-SWAN on the HFOS mesh.
+
+For metric units w/a subdomain:
+./gen-figs.py -path /path/to/diagnostic/output/ -unit imperial -bbox 40:-70:30:-80
+OR
+python gen-figs.py -path /path/to/diagnostic/output/ -unit imperial -bbox 40:-70:30:-80
+
+-bbox = North:East:South:West extent of subset/plot.
