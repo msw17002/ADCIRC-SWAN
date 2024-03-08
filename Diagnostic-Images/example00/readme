@@ -1,6 +1,6 @@
 Example image generation using ADCIRC-SWAN on the HFOS mesh.
 
-For metric units:
+For imperial (feet - miles/hour - mb) units:
 ./gen-figs.py -path /path/to/diagnostic/output/ -unit imperial
 OR
 python gen-figs.py -path /path/to/diagnostic/output/ -unit imperial
