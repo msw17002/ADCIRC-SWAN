@@ -1,0 +1,6 @@
+Example image generation using ADCIRC-SWAN on the HFOS mesh.
+
+For metric units:
+./gen-figs.py -path /path/to/diagnostic/output/ -unit si
+OR
+python gen-figs.py -path /path/to/diagnostic/output/ -unit si
