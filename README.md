@@ -24,5 +24,3 @@
     <li>swan_HS_max.63.nc (field 'swan_HS_max') units are meters (converts to feet)</li>
 </ul>
 
-<p>To run,</p>
-<p>python gen-figs.py -path path_to_files</p>
