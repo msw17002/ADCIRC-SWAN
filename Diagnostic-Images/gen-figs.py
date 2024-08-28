@@ -3,21 +3,6 @@
 import warnings
 warnings.filterwarnings("ignore")
 
-#===this function calculates u/v components from direction and intensity
-def wind_spddir_to_uv(mag,dir):
-    """
-    calculated the u and v wind components from wind speed and direction
-    Input:
-        wspd: wind speed
-        wdir: wind direction
-    Output:
-        u: u wind component
-        v: v wind component
-    """
-    rad = 4.0*np.arctan(1)/180.
-    u = -mag*np.sin(rad*dir)
-    v = -mag*np.cos(rad*dir)
-    return u,v
 #===this function plots the max. and min. value onto a projected map 
 def min_max(zfield,minopt,maxopt):
     #-plot min
@@ -406,7 +391,7 @@ for d in diags:
             for i in range(len(dirmax)):
                 #-calculate wave compenents 
                 if (np.isnan(zfield[i]) or np.isnan(dirmax[i])): u,v = 0,0
-                else:                                            u,v = wind_spddir_to_uv(zfield[i],dirmax[i])
+                else:                                            u,v = zfield[i] * np.cos(dirmax[i] * (np.pi/180)),zfield[i] * np.sin(dirmax[i] * (np.pi/180))
                 #-append to lists 
                 waveU.append(u)
                 waveV.append(v)
