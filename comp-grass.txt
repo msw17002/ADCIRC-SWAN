@@ -33,6 +33,7 @@ source ~/.basrhc
 git clone https://github.com/ccht-ncsu/Kalpana.git
 cd Kalpana/install/
 conda create -n Kalpana python=3.9
-pip install -r requirements.txt
+pip install -r requirements.txt <OR> pip install e .
 pip install grass-session
+
 pip install grass-script
