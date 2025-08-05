@@ -1,0 +1,38 @@
+#===on linux===
+#!/bin/bash
+
+#---install pre-reqs
+dnf install dnf-plugins-core
+dnf install epel-release
+dnf config-manager --set-enabled powertools
+
+dnf install flex bison make zlib-devel gcc-c++ gettext \
+             fftw-devel libtiff-devel sqlite-devel \
+             proj proj-devel proj-datumgrid libxml2 \
+             geos geos-devel git \
+             netcdf netcdf-devel atlas-devel \
+             blas-devel lapack-devel libpq-devel \
+             python3-devel python3-numpy \
+             python3-dateutil python3-imaging python3-matplotlib \
+             gdal gdal-libs gdal-python-tools python3-gdal gdal-devel \
+             wxGTK3-devel mesa-libGL-devel mesa-libGLU-devel \
+             libXmu-devel libX11-devel PDAL-devel PDAL-libs
+#---install grass
+wget https://github.com/OSGeo/grass/archive/refs/tags/8.2.0.tar.gz
+tar -xvzf 8.2.0.tar.gz
+cd grass-8.2.0
+ ./configure   --with-cxx   --with-gdal=/usr/bin/gdal-config   --with-proj --with-proj-share=/usr/share/proj   --with-geos   --with-sqlite  --enable-largefile --with-netcdf --with-pdal --prefix=/usr
+make 
+make install
+#---install anaconda
+wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
+chmod +x Anaconda3-2023.09-0-Linux-x86_64.sh
+./Anaconda3-2023.09-0-Linux-x86_64.sh
+source ~/.basrhc
+#---install Kalpana
+git clone https://github.com/ccht-ncsu/Kalpana.git
+cd Kalpana/install/
+conda create -n Kalpana python=3.9
+pip install -r requirements.txt
+pip install grass-session
+pip install grass-script
